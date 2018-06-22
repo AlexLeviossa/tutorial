@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="rortutorial_development@localhost" uuid="50d5e650-6bcf-48f3-9fe5-3be7cd80a18e">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:5432/rortutorial_development</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="Rails rortutorial: development" uuid="07266ea4-d284-4ba0-9451-19cef426990f">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>$PROJECT_DIR$/config/database.yml</remarks>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:rortutorial_development</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="Rails rortutorial: production" uuid="5cd64a9e-06f3-475c-8318-4a632c29ac53">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>$PROJECT_DIR$/config/database.yml</remarks>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:rortutorial_production</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="Rails rortutorial: test" uuid="e922c65a-7889-47bc-b7ae-ed64214574e2">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>$PROJECT_DIR$/config/database.yml</remarks>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:rortutorial_test</jdbc-url>
+    </data-source>
+  </component>
+</project>

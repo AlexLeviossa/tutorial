@@ -1,0 +1,21 @@
+
+
+<h1>Listing phrases</h1>
+
+<table class="table">
+  <tr>
+    <th>Id</th>
+    <th>Phrase</th>
+    <th>Translation</th>
+  </tr>
+
+  <%= render partial: "phrase", collection: @phrases %>
+
+</table>
+
+<div class="digg_pagination">
+  <div class="page_info">
+    <%= page_entries_info @phrases %>
+  </div>
+  <%= will_paginate @phrases, :container => false %>
+</div>
