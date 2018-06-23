@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="rortutorial_development@localhost" uuid="50d5e650-6bcf-48f3-9fe5-3be7cd80a18e">
+      <database-info product="PostgreSQL" version="10.4" jdbc-version="4.2" driver-name="PostgreSQL JDBC Driver" driver-version="42.2.2">
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
+      <secret-storage>master_key</secret-storage>
+      <introspection-schemas>rortutorial_development:public</introspection-schemas>
+    </data-source>
+    <data-source name="Rails rortutorial: development" uuid="07266ea4-d284-4ba0-9451-19cef426990f">
+      <database-info product="PostgreSQL" version="10.4" jdbc-version="4.2" driver-name="PostgreSQL JDBC Driver" driver-version="42.2.2">
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
+      <introspection-schemas>rortutorial_development:public</introspection-schemas>
+    </data-source>
+    <data-source name="Rails rortutorial: production" uuid="5cd64a9e-06f3-475c-8318-4a632c29ac53">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
+      <user-name>rortutorial</user-name>
+    </data-source>
+    <data-source name="Rails rortutorial: test" uuid="e922c65a-7889-47bc-b7ae-ed64214574e2">
+      <database-info product="PostgreSQL" version="10.4" jdbc-version="4.2" driver-name="PostgreSQL JDBC Driver" driver-version="42.2.2">
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
+      <introspection-schemas>rortutorial_test:public</introspection-schemas>
+    </data-source>
+  </component>
+</project>
