@@ -1,22 +1,30 @@
 
 
-<h1>Listing phrases</h1>
+h1
+  | Listing phrases
 
-<table class="table">
-  <tr>
-    <th>Id</th>
-    <th>Phrase</th>
-    <th>Translation</th>
-    <th>Category</th>
-  </tr>
+table.table
+  tr
+    th
+      | Id
+    th
+      | Phrase
+    th
+      | Translation
+    th
+      | Category
+    th
+      | Author
 
-  <%= render partial: "phrase", collection: @phrases %>
+  - @phrases.each do |phrase|
+    = render phrase, author: true
 
-</table>
 
-<div class="digg_pagination">
-  <div class="page_info">
-    <%= page_entries_info @phrases %>
-  </div>
-  <%= will_paginate @phrases, :container => false %>
-</div>
+  // = render partial: "phrase", collection: @phrases
+
+
+.digg_pagination
+  .page_info
+    = page_entries_info @phrases
+  = will_paginate @phrases, :container => false
+

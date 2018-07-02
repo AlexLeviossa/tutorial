@@ -1,3 +1,21 @@
-<h1>
-<%= @user.username %>
-</h1>
+.container-fluid
+  .row
+    .col-md-12
+      h1 = current_user.username
+
+      h3 User Phrases
+      table.table
+        tr
+          th Id
+          th Phrase
+          th Translation
+          th Category
+          th Actions
+
+        - @phrases.each do |phrase|
+          = render phrase, author: false
+
+  .digg_pagination
+    .page_info
+      = page_entries_info @phrases
+        = will_paginate @phrases, :container => false

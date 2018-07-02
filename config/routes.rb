@@ -2,11 +2,16 @@
 
 Rails.application.routes.draw do
   devise_for :users
+
   root 'phrases#index'
-  get 'phrases/new', to: 'phrases#new'
-  post 'phrases', to: 'phrases#create', as: 'phrases'
-  get 'phrases', to: 'phrases#index'
+
   get 'static_pages/hello'
 
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  resources :phrases do
+    resources :examples, only: %i[create destroy]
+  end
+
+  resources :users, only: %i[index show] do
+    get :profile, on: :collection
+  end
 end

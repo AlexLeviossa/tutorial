@@ -1,0 +1,11 @@
+h1 Listing users
+
+table.table
+  tr
+    th Id
+    th Username
+    th Email
+    th Created At
+    th Updated At
+
+  = render partial: "user", collection: @users

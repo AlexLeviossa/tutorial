@@ -8,6 +8,7 @@ ruby '2.6.0'
 gem 'autoprefixer-rails'
 gem 'bootstrap'
 gem 'bootstrap-sass'
+gem 'friendly_id'
 gem 'jquery-rails'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

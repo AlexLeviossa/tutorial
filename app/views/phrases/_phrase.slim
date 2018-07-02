@@ -1,5 +1,13 @@
 tr
-  td = phrase.id
+  td = link_to phrase.id, phrase_path(phrase)
   td = phrase.phrase
   td = phrase.translation
   td = phrase.category
+  - if author
+    td = link_to phrase.user.username, user_path(phrase.user)
+  - else
+    td
+      - if phrase.author? current_user
+        = link_to 'edit', edit_phrase_path(phrase), class: 'edit_phrase_link'
+        ' |
+        = link_to 'delete', phrase_path(phrase), class: 'delete_phrase', method: :delete, data: { confirm: 'Are you sure?' }
