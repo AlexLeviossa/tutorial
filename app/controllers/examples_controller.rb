@@ -3,6 +3,7 @@
 class ExamplesController < ApplicationController
 
   before_action :set_phrase!, only: %i[create destroy]
+  before_action :check_user!, only: :destroy
 
   def create
     @example = @phrase.examples.new(example_params)
@@ -29,5 +30,12 @@ class ExamplesController < ApplicationController
 
   def example_params
     params.require(:example).permit(:example, :user_id)
+  end
+end
+
+def check_user!
+  unless @phrase.author? current_user
+    flash[:danger] = 'Не трогай, а то вычислю по айпи!'
+    redirect_to phrase_path(@phrase)
   end
 end
