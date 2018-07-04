@@ -8,6 +8,10 @@ Rails.application.routes.draw do
   get 'static_pages/hello'
 
   resources :phrases do
+    member do
+      put 'like', to: 'phrases#upvote'
+      put 'dislike', to: 'phrases#downvote'
+    end
     resources :examples, only: %i[create destroy]
   end
 

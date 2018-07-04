@@ -11,7 +11,9 @@
  * It is generally better to create a new file per style scope.
  *
  */
+
 @import "bootstrap";
+@import "font-awesome";
 @import "static_pages";
 @import "phrases";
 
@@ -28,10 +30,12 @@
   background-color: red;
 }
 
- .btn.btn-primary {
+.btn.btn-primary {
    margin-left: 47.9%;
- }
-
+}
+i.fa.fa-thumbs-down {
+  color: red;
+}
  h2 {
    background-color: antiquewhite;
    text-align: center;

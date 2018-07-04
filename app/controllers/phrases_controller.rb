@@ -23,6 +23,19 @@ class PhrasesController < ApplicationController
 
   def update; end
 
+
+  def upvote
+    @phrase = Phrase.friendly.find(params[:id])
+    @phrase.liked_by current_user
+    redirect_to root_path
+  end
+
+  def downvote
+    @phrase = Phrase.friendly.find(params[:id])
+    @phrase.downvote_from current_user
+    redirect_to root_path
+  end
+
   def destroy
     @phrase = Phrase.find(params[:id])
     @phrase.destroy

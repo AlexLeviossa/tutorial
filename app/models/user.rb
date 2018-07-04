@@ -6,12 +6,18 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
+
   extend FriendlyId
   friendly_id :username, use: :slugged
+
 
   has_many :phrases
   has_many :examples
 
+  acts_as_voter
+
   validates :username, presence: true
+
+
 
 end

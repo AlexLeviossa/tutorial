@@ -11,3 +11,9 @@ tr
         = link_to 'edit', edit_phrase_path(phrase), class: 'edit_phrase_link'
         ' |
         = link_to 'delete', phrase_path(phrase), class: 'delete_phrase', method: :delete, data: { confirm: 'Are you sure?' }
+  td
+    = link_to like_phrase_path(phrase), method: :put
+      = fa_icon 'thumbs-up'
+    | #{phrase.score}
+    = link_to dislike_phrase_path(phrase), method: :put
+      = fa_icon 'thumbs-down'

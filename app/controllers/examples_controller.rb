@@ -5,6 +5,7 @@ class ExamplesController < ApplicationController
   before_action :set_phrase!, only: %i[create destroy]
   before_action :check_user!, only: :destroy
 
+
   def create
     @example = @phrase.examples.new(example_params)
     if @example.save
