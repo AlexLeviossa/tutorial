@@ -4,3 +4,12 @@ tr
   td = date_formatter example.created_at
   -if example_delete? example
     td = link_to 'delete', phrase_example_path(example.phrase, example), class: 'delete_phrase', method: :delete
+  -else
+    td
+      | Not allowed for you
+  td
+    = link_to like_phrase_example_path(example.phrase, example), method: :put
+      = fa_icon 'thumbs-up'
+    | #{example.score}
+    = link_to dislike_phrase_example_path(example.phrase, example), method: :put
+      = fa_icon 'thumbs-down'

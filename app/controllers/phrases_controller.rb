@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class PhrasesController < ApplicationController
-  before_action :set_phrase!, only: %i[edit update destroy]
+  before_action :set_phrase!, only: %i[show upvote downvote edit update destroy]
   before_action :check_user!, only: %i[edit update destroy]
 
   def index
@@ -9,7 +9,6 @@ class PhrasesController < ApplicationController
   end
 
   def show
-    @phrase = Phrase.friendly.find(params[:id])
     @examples = @phrase.examples.includes(:user).paginate(page: params[:page])
     @example = @phrase.examples.build(user_id: current_user.id)
   end
@@ -17,29 +16,6 @@ class PhrasesController < ApplicationController
   def new
     @phrase = Phrase.new
     @phrase.examples.build(user_id: current_user.id)
-  end
-
-  def edit; end
-
-  def update; end
-
-
-  def upvote
-    @phrase = Phrase.friendly.find(params[:id])
-    @phrase.liked_by current_user
-    redirect_to root_path
-  end
-
-  def downvote
-    @phrase = Phrase.friendly.find(params[:id])
-    @phrase.downvote_from current_user
-    redirect_to root_path
-  end
-
-  def destroy
-    @phrase = Phrase.find(params[:id])
-    @phrase.destroy
-    redirect_to root_path
   end
 
   def create
@@ -51,6 +27,42 @@ class PhrasesController < ApplicationController
       flash[:danger] = @phrase.errors.full_messages.to_sentence
       render :new
     end
+  end
+
+  def update
+    if @phrase.update_attributes(phrase_params)
+      flash[:notice] = 'Phrase has been updated!'
+      redirect_to user_path(@phrase.user)
+    else
+      flash[:danger] = @phrase.errors.full_messages.to_sentence
+      render :edit
+    end
+  end
+
+
+  def upvote
+    if current_user.voted_for? @phrase
+      redirect_to root_path
+    else
+      @phrase.upvote_by current_user
+      @phrase.user.increase_karma_phrase
+      redirect_to root_path
+    end
+  end
+
+  def downvote
+    if current_user.voted_for? @phrase
+      redirect_to root_path
+    else
+      @phrase.downvote_from current_user
+      @phrase.user.decrease_karma_phrase
+      redirect_to root_path
+    end
+  end
+
+  def destroy
+    @phrase.destroy
+    redirect_to root_path
   end
 
   private

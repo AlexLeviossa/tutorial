@@ -12,9 +12,7 @@ class Phrase < ApplicationRecord
   accepts_nested_attributes_for :examples
 
   acts_as_votable
-  def score
-    self.get_likes.size - self.get_downvotes.size
-  end
+
 
   validates :phrase, :translation, presence: true
 

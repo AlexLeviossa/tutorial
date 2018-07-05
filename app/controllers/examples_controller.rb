@@ -1,10 +1,8 @@
 # frozen_string_literal: true
 
 class ExamplesController < ApplicationController
-
-  before_action :set_phrase!, only: %i[create destroy]
+  before_action :set_phrase!
   before_action :check_user!, only: :destroy
-
 
   def create
     @example = @phrase.examples.new(example_params)
@@ -23,7 +21,33 @@ class ExamplesController < ApplicationController
     redirect_to phrase_path(@phrase)
   end
 
+  def upvote
+    @example = @phrase.examples.find_by(id: params[:id])
+    if current_user.voted_for? @example
+      redirect_to phrase_path(@phrase)
+    else
+      @example.upvote_by current_user
+      @example.user.increase_karma_example
+      redirect_to phrase_path(@phrase)
+    end
+  end
+
+  def downvote
+    @example = @phrase.examples.find_by(id: params[:id])
+    if current_user.voted_for? @example
+      redirect_to phrase_path(@phrase)
+    else
+      @example.upvote_by current_user
+      @example.user.decrease_karma_example
+      redirect_to phrase_path(@phrase)
+    end
+  end
+
   private
+
+  def set_example!
+    @example = @phrase.examples.find_by(id: params[:example_id])
+  end
 
   def set_phrase!
     @phrase = Phrase.friendly.find(params[:phrase_id])
@@ -32,11 +56,12 @@ class ExamplesController < ApplicationController
   def example_params
     params.require(:example).permit(:example, :user_id)
   end
-end
 
-def check_user!
-  unless @phrase.author? current_user
-    flash[:danger] = 'Не трогай, а то вычислю по айпи!'
-    redirect_to phrase_path(@phrase)
+  def check_user!
+    unless @phrase.author? current_user
+      flash[:danger] = 'Не трогай, а то вычислю по айпи!'
+      redirect_to phrase_path(@phrase)
+    end
   end
 end
+

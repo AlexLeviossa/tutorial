@@ -11,8 +11,9 @@
           th Phrase
           th Translation
           th Category
-          - if @user == current_user
-            th Actions
+          th Actions
+          th Votes
+
 
         - @phrases.each do |phrase|
           = render phrase, author: false

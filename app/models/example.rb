@@ -8,5 +8,4 @@ class Example < ApplicationRecord
 
   acts_as_votable
 
-
 end
