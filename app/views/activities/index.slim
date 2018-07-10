@@ -1,0 +1,23 @@
+h1 User's Activities
+
+
+- @activities.each do |activity|
+  .activity
+    == activity.readed ? '<i class="fa fa-check-circle"> &nbsp </i>' : '<i class = "fa fa-times-circle"> &nbsp </i>'
+
+    = link_to activity.owner.username, activity.owner if activity.owner
+
+    - if activity.trackable_type == 'Example'
+      |&nbsp; added example &nbsp;
+      = link_to activity.trackable.example, activity.trackable.phrase
+    - else
+      |&nbsp; added phrase &nbsp;
+      = link_to activity.trackable.phrase, phrases_path(@phrases)
+
+
+
+coffee:
+  $(document).ready ->
+    $.ajax '/activities/read_all',
+      type: 'PUT'
+      dataType: 'json'

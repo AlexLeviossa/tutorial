@@ -22,6 +22,7 @@ class PhrasesController < ApplicationController
     @phrase = current_user.phrases.new(phrase_params)
     if @phrase.save
       flash[:notice] = 'Phrase has been created'
+      @phrase.create_activity(key: 'create', owner: current_user)
       redirect_to root_path
     else
       flash[:danger] = @phrase.errors.full_messages.to_sentence

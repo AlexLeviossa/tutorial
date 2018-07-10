@@ -8,6 +8,7 @@ class ExamplesController < ApplicationController
     @example = @phrase.examples.new(example_params)
     if @example.save
       flash[:notice] = 'Example has been created'
+      @example.create_activity(key: 'create', owner: current_user, recipient: @phrase.user)
       redirect_to phrase_path(@phrase)
     else
       flash[:danger] = @example.errors.full_messages.to_sentence
