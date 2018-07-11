@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class PhrasesController < ApplicationController
-  before_action :set_phrase!, only: %i[show upvote downvote edit update destroy]
+  before_action :set_phrase!, only: %i[show edit update destroy vote]
   before_action :check_user!, only: %i[edit update destroy]
 
   def index
@@ -40,29 +40,13 @@ class PhrasesController < ApplicationController
     end
   end
 
-
-  def upvote
-    if current_user.voted_for? @phrase
-      redirect_to root_path
-    else
-      @phrase.upvote_by current_user
-      @phrase.user.increase_karma_phrase
-      redirect_to root_path
-    end
-  end
-
-  def downvote
-    if current_user.voted_for? @phrase
-      redirect_to root_path
-    else
-      @phrase.downvote_from current_user
-      @phrase.user.decrease_karma_phrase
-      redirect_to root_path
-    end
-  end
-
   def destroy
     @phrase.destroy
+    redirect_to root_path
+  end
+
+  def vote
+    vote_global(@phrase)
     redirect_to root_path
   end
 

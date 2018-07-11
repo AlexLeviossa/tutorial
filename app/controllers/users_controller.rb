@@ -9,6 +9,6 @@ class UsersController < ApplicationController
   end
 
   def index
-    @users = User.includes(:phrases).paginate(page: params[:page], per_page: 10)
+    @users = User.includes(:phrases).order(karma: :desc).paginate(page: params[:page], per_page: 10)
   end
 end

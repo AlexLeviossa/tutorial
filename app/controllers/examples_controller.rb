@@ -2,6 +2,7 @@
 
 class ExamplesController < ApplicationController
   before_action :set_phrase!
+  before_action :set_example!
   before_action :check_user!, only: :destroy
 
   def create
@@ -22,26 +23,9 @@ class ExamplesController < ApplicationController
     redirect_to phrase_path(@phrase)
   end
 
-  def upvote
-    @example = @phrase.examples.find_by(id: params[:id])
-    if current_user.voted_for? @example
-      redirect_to phrase_path(@phrase)
-    else
-      @example.upvote_by current_user
-      @example.user.increase_karma_example
-      redirect_to phrase_path(@phrase)
-    end
-  end
-
-  def downvote
-    @example = @phrase.examples.find_by(id: params[:id])
-    if current_user.voted_for? @example
-      redirect_to phrase_path(@phrase)
-    else
-      @example.upvote_by current_user
-      @example.user.decrease_karma_example
-      redirect_to phrase_path(@phrase)
-    end
+  def vote
+    vote_global(@example)
+    redirect_to root_path
   end
 
   private

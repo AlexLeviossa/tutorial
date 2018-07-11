@@ -16,8 +16,10 @@ tr
         | Not allowed for you
 
   td
-    = link_to like_phrase_path(phrase), method: :put
+    = link_to vote_phrase_path(phrase, vote: 'up'), method: :post
       = fa_icon 'thumbs-up'
     | #{phrase.score}
-    = link_to dislike_phrase_path(phrase), method: :put
+    = link_to vote_phrase_path(phrase, vote: 'down'), method: :post
       = fa_icon 'thumbs-down'
+
+

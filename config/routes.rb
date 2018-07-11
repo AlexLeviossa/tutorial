@@ -16,14 +16,10 @@ Rails.application.routes.draw do
 
   resources :phrases do
     member do
-      put 'like', to: 'phrases#upvote'
-      put 'dislike', to: 'phrases#downvote'
+      post :vote
     end
     resources :examples, only: %i[create destroy] do
-      member do
-        put 'like', to: 'examples#upvote'
-        put 'dislike', to: 'examples#downvote'
-      end
+      post :vote
     end
   end
 
