@@ -8,8 +8,9 @@ tr
     td
       | Not allowed for you
   td
-    = link_to like_phrase_example_path(example.phrase, example, vote: 'up'), method: :post
+    = link_to phrase_example_vote_path(example.phrase, example, vote: 'up'), method: :post
       = fa_icon 'thumbs-up'
     | #{example.score}
-    = link_to dislike_phrase_example_path(example.phrase, example, vote: 'up'), method: :post
+
+    = link_to phrase_example_vote_path(example.phrase, example, vote: 'down'), method: :post
       = fa_icon 'thumbs-down'

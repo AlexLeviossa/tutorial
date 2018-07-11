@@ -2,18 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e4f2023f-ef9d-47b2-befb-ac3a2f707b2b" name="Default" comment="Adding user form">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/50d5e650-6bcf-48f3-9fe5-3be7cd80a18e.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/50d5e650-6bcf-48f3-9fe5-3be7cd80a18e.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/Alex_Krylov.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/Alex_Krylov.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/examples_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/examples_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/phrases_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/phrases_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/users_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/users_controller.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/concerns/shared_methods.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/concerns/shared_methods.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/activities/index.slim" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/activities/index.slim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/user.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/user.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/examples/_example.slim" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/examples/_example.slim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/phrases/_phrase.slim" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/phrases/_phrase.slim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/layouts/_navigation.slim" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/_navigation.slim" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -102,20 +95,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="examples_controller.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/examples_controller.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="29" lean-forward="true" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="phrases_controller.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/phrases_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="105">
-              <caret line="7" column="81" lean-forward="true" selection-start-line="7" selection-start-column="81" selection-end-line="7" selection-end-column="81" />
+              <caret line="7" column="81" selection-start-line="7" selection-start-column="81" selection-end-line="7" selection-end-column="81" />
             </state>
           </provider>
         </entry>
@@ -129,11 +113,65 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="shared_methods.rb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="shared_methods.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/concerns/shared_methods.rb">
           <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="41" selection-start-line="10" selection-start-column="41" selection-end-line="10" selection-end-column="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_navigation.slim" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/layouts/_navigation.slim">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="32" column="30" selection-start-line="32" selection-start-column="30" selection-end-line="32" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="show.slim" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/phrases/show.slim">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="314">
+              <caret line="26" selection-start-line="26" selection-end-line="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_example.slim" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/examples/_example.slim">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" column="27" lean-forward="true" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_phrase.slim" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/phrases/_phrase.slim">
+          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="285">
-              <caret line="19" column="37" lean-forward="true" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
+              <caret line="19" column="27" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="user.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/user.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="activities" pinned="false" current-in-tab="false">
+        <entry file="das://50d5e650-6bcf-48f3-9fe5-3be7cd80a18e/database/rortutorial_development/schema/public/table/activities">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
             </state>
           </provider>
         </entry>
@@ -141,22 +179,8 @@
       <file leaf-file-name="application_controller.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
+            <state relative-caret-position="300">
               <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="application_record.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/application_record.rb">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="votes" pinned="false" current-in-tab="false">
-        <entry file="das://50d5e650-6bcf-48f3-9fe5-3be7cd80a18e/database/rortutorial_development/schema/public/table/votes">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
             </state>
           </provider>
         </entry>
@@ -214,9 +238,7 @@
         <option value="$PROJECT_DIR$/db/migrate/20180706085020_create_activities.rb" />
         <option value="$PROJECT_DIR$/app/views/activities/index.html.slim" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/application.scss" />
-        <option value="$PROJECT_DIR$/app/models/user.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20180710093614_add_readed_to_activities.rb" />
-        <option value="$PROJECT_DIR$/app/views/layouts/_navigation.slim" />
         <option value="$PROJECT_DIR$/app/models/example.rb" />
         <option value="$PROJECT_DIR$/app/models/phrase.rb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/activities.scss" />
@@ -226,10 +248,12 @@
         <option value="$PROJECT_DIR$/app/controllers/users_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/application_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/phrases/_phrase.slim" />
-        <option value="$PROJECT_DIR$/app/views/examples/_example.slim" />
         <option value="$PROJECT_DIR$/app/controllers/phrases_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/examples_controller.rb" />
         <option value="$PROJECT_DIR$/app/models/concerns/shared_methods.rb" />
+        <option value="$PROJECT_DIR$/app/views/examples/_example.slim" />
+        <option value="$PROJECT_DIR$/app/models/user.rb" />
+        <option value="$PROJECT_DIR$/app/views/layouts/_navigation.slim" />
       </list>
     </option>
   </component>
@@ -252,9 +276,8 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="y" value="23" />
     <option name="width" value="1440" />
-    <option name="height" value="797" />
+    <option name="height" value="900" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -262,6 +285,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="RailsProjectView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -324,6 +348,13 @@
               <item name="rortutorial" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="layouts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="rortutorial" type="b2602c69:ProjectViewProjectNode" />
+              <item name="rortutorial" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="phrases" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -342,7 +373,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="RailsProjectView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -497,7 +527,8 @@
       <workItem from="1530513095717" duration="14301000" />
       <workItem from="1530536897577" duration="48118000" />
       <workItem from="1530867277803" duration="28844000" />
-      <workItem from="1531299396301" duration="994000" />
+      <workItem from="1531299396301" duration="1771000" />
+      <workItem from="1531302523994" duration="5049000" />
     </task>
     <task id="LOCAL-00001" summary="Adding user form">
       <created>1529665770384</created>
@@ -510,7 +541,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="223602000" />
+    <option name="totallyTimeSpent" value="229428000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -526,18 +557,18 @@
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3286119" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5035765" side_tool="true" weight="0.28848484" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50500715" side_tool="true" weight="0.28848484" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32719547" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49791667" weight="0.2642424" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" sideWeight="0.49642345" visible="true" weight="0.28848484" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32719547" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49499285" visible="true" weight="0.28848484" />
       <window_info anchor="bottom" id="Database Console" order="8" sideWeight="0.4985694" weight="0.32848486" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14377682" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14592275" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" visible="true" weight="0.14306152" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -549,27 +580,27 @@
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49861112" weight="0.32848486" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" anchor="bottom" id="Find" order="1" sideWeight="0.49861112" visible="true" weight="0.3286119" />
       <window_info anchor="bottom" id="Database Console" order="13" sideWeight="0.4985694" weight="0.3286119" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27539343" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3286119" />
-      <window_info anchor="bottom" id="Version Control" order="11" weight="0.32719547" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49791667" weight="0.26600283" />
       <window_info anchor="bottom" id="Inspection Results" order="14" weight="0.32859176" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info active="true" anchor="bottom" id="Find" order="1" sideWeight="0.49861112" visible="true" weight="0.3286119" />
       <window_info anchor="right" id="Database" order="3" visible="true" weight="0.17238913" />
+      <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.49930555" weight="0.3286119" />
       <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49785408" weight="0.3838527" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50214595" side_tool="true" weight="0.38526914" />
+      <window_info anchor="bottom" id="Version Control" order="11" weight="0.32719547" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.49930555" weight="0.3286119" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50214595" side_tool="true" weight="0.38526914" />
       <window_info id="Favorites" order="2" side_tool="true" />
     </layout-to-restore>
   </component>
@@ -685,13 +716,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/_navigation.slim">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="25" column="69" selection-start-line="25" selection-start-column="69" selection-end-line="25" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20180706085020_create_activities.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -710,13 +734,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" column="35" lean-forward="true" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://50d5e650-6bcf-48f3-9fe5-3be7cd80a18e/database/rortutorial_development/schema/public/table/activities">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
@@ -776,13 +793,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/examples/_example.slim">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/phrases/new.slim">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -796,30 +806,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/user.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/phrase.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/phrases/_phrase.slim">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/phrases/show.slim">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
           <caret line="26" selection-start-line="26" selection-end-line="26" />
         </state>
       </provider>
@@ -837,14 +826,14 @@
     <entry file="file://$PROJECT_DIR$/app/controllers/examples_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
-          <caret line="4" column="29" lean-forward="true" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
+          <caret line="4" column="29" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/phrases_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
-          <caret line="7" column="81" lean-forward="true" selection-start-line="7" selection-start-column="81" selection-end-line="7" selection-end-column="81" />
+          <caret line="7" column="81" selection-start-line="7" selection-start-column="81" selection-end-line="7" selection-end-column="81" />
         </state>
       </provider>
     </entry>
@@ -857,15 +846,57 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
+        <state relative-caret-position="300">
           <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/phrases/show.slim">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="314">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/examples/_example.slim">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="27" lean-forward="true" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://50d5e650-6bcf-48f3-9fe5-3be7cd80a18e/database/rortutorial_development/schema/public/table/activities">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/user.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/phrases/_phrase.slim">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="27" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="27" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/concerns/shared_methods.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="37" lean-forward="true" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
+        <state relative-caret-position="150">
+          <caret line="10" column="41" selection-start-line="10" selection-start-column="41" selection-end-line="10" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/_navigation.slim">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="32" column="30" selection-start-line="32" selection-start-column="30" selection-end-line="32" selection-end-column="30" />
         </state>
       </provider>
     </entry>

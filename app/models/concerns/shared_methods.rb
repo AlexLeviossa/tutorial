@@ -8,9 +8,8 @@ module SharedMethods
   end
 
   def score
-    self.get_upvotes.size - self.get_downvotes.size
+    get_upvotes.size - get_downvotes.size
   end
-
 
   def set_karma(vote, current_user)
     author = user

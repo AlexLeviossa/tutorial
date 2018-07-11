@@ -24,12 +24,27 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-light
         = link_to 'Phrases', phrases_path, :class => 'nav-link'
       li.nav-item
         = link_to 'New phrase', new_phrase_path, :class => 'nav-link'
+
       li.nav-item.dropdown
         a#navbarDropdown.nav-link.dropdown-toggle[href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"]
           | User
+          - if user_signed_in?
+            - if current_user.new_activity?
+              = fa_icon 'check'
+
 
         .dropdown-menu[aria-labelledby="navbarDropdown"]
           a.dropdown-item[href="/users/profile"]
             | Profile
           a.dropdown-item[href="/activities/index"]
             | Activities
+          a.dropdown-item
+            -if user_signed_in?
+              -if current_user.new_activity?
+                = link_to activities_path, :class => 'dropdown-item' do
+                  | New activity !
+
+
+
+
+
