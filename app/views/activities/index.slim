@@ -6,18 +6,16 @@ h1 User's Activities
     == activity.readed ? '<i class="fa fa-check-circle"> &nbsp </i>' : '<i class = "fa fa-times-circle"> &nbsp </i>'
 
     = link_to activity.owner.username, activity.owner if activity.owner
+    ' &nbsp;
+    = activity.key.downcase
+    ' &nbsp;
+    = activity.trackable_type.downcase
+    ' &nbsp;
 
     - if activity.trackable_type == 'Example'
-      - if activity.key == 'create'
-        |&nbsp; added example &nbsp;
-        = link_to activity.trackable.example, activity.trackable.phrase
-      -else
-        |&nbsp; liked example &nbsp;
-        = link_to activity.trackable.example, activity.trackable.phrase
+      = link_to activity.trackable.example, activity.trackable.phrase
     - else
-      |&nbsp; added phrase &nbsp;
       = link_to activity.trackable.phrase, phrases_path(@phrases)
-
 
 
 coffee:

@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 class PhrasesController < ApplicationController
+
   before_action :set_phrase!, only: %i[show edit update destroy vote]
   before_action :check_user!, only: %i[edit update destroy]
 
@@ -47,7 +48,7 @@ class PhrasesController < ApplicationController
 
   def vote
     vote_global(@phrase)
-    redirect_to root_path
+    redirect_back(fallback_location: root_path)
   end
 
   private
@@ -63,7 +64,7 @@ class PhrasesController < ApplicationController
   def check_user!
     unless @phrase.author? current_user
       flash[:danger] = 'You are don\'t an author of phrase, go away!'
-      redirect_to(:back)
+      redirect_back(fallback_location: root_path)
     end
   end
 end

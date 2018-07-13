@@ -1,0 +1,28 @@
+.container-fluid
+  .custom-center
+    .row
+      .col-md-6.col-md-offset-1
+
+
+
+        = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+
+          .form-group
+            = f.label :email
+            br
+            = f.email_field :email, autocomplete: 'email', :class => 'form-control'
+          .form-group
+            = f.label :password
+            br
+            = f.password_field :password, autocomplete: 'off', :class => 'form-control'
+
+          - if devise_mapping.rememberable?
+            .form-group
+              = f.check_box :remember_me
+              = f.label :remember_me
+
+          .sessions-actions
+            .actions
+              = f.submit 'Log in'
+
+        = render 'devise/shared/links'

@@ -16,33 +16,32 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-light
     span.navbar-toggler-icon
 
   #navbarSupportedContent.collapse.navbar-collapse
-    ul.navbar-nav.mr-auto
+    .custom-navigation
+      ul.navbar-nav.mr-auto
+        - if user_signed_in?
+          li.nav-item
+            = link_to 'Users', users_path, :class => 'nav-link'
+          li.nav-item
+            = link_to 'Phrases', phrases_path, :class => 'nav-link'
+          li.nav-item
+            = link_to 'New phrase', new_phrase_path, :class => 'nav-link'
 
-      li.nav-item
-        = link_to 'Users', users_path, :class => 'nav-link'
-      li.nav-item
-        = link_to 'Phrases', phrases_path, :class => 'nav-link'
-      li.nav-item
-        = link_to 'New phrase', new_phrase_path, :class => 'nav-link'
-
-      li.nav-item.dropdown
-        a#navbarDropdown.nav-link.dropdown-toggle[href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"]
-          | User
-          - if user_signed_in?
-            - if current_user.new_activity?
-              = fa_icon 'check'
+          li.nav-item.dropdown
+            a#navbarDropdown.nav-link.dropdown-toggle[href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"]
+              | User
+              - if user_signed_in?
+                - if current_user.new_activity?
+                  = fa_icon 'check'
 
 
-        .dropdown-menu[aria-labelledby="navbarDropdown"]
-          a.dropdown-item[href="/users/profile"]
-            | Profile
-          a.dropdown-item[href="/activities/index"]
-            | Activities
-          a.dropdown-item
-            -if user_signed_in?
-              -if current_user.new_activity?
-                = link_to activities_path, :class => 'dropdown-item' do
-                  | New activity !
+            .dropdown-menu[aria-labelledby="navbarDropdown"]
+              a.dropdown-item[href="/users/profile"]
+                | Profile
+              a.dropdown-item[href="/activities/index"]
+                | Activities
+                - if current_user.new_activity?
+                  = fa_icon 'check'
+
 
 
 

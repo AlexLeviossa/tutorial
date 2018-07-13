@@ -18,6 +18,16 @@
 @import "phrases";
 @import "activities";
 
+.custom-center {
+  margin-left: 34%;
+}
+
+.sessions-actions {
+  margin-left: 43%;
+}
+
+
+
 
 .alert{
   color: white;
@@ -32,22 +42,16 @@
   background-color: red;
 }
 
+.alert-alert {
+  background-color: red;
+}
+
 .btn.btn-primary {
    margin-left: 47.9%;
 }
 i.fa.fa-thumbs-down {
   color: red;
 }
- h2 {
-   background-color: antiquewhite;
-   text-align: center;
-   display: none;
- }
-
- ul {
-   margin-left: 43%;
-   display: none;
- }
 
  .submit_button {
    background-color: transparent;
@@ -55,11 +59,16 @@ i.fa.fa-thumbs-down {
    color: white;
  }
 
+ .custom-navigation {
+   margin-left: 60%;
+ }
+
  .new_phrase {
    padding: 40px 200px;
  }
 
 .digg_pagination {
+  margin-left: 40%;
   background: white;
   cursor: default;
   /* self-clearing method: */ }
